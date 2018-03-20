@@ -1,0 +1,13 @@
+<div class="bodyDiv">
+  <ul class="employeeList">
+
+    <li class="employee" *ngFor="let user of users" (click)="toggleModal(user)">
+      <img [src]="user.picture.large" alt="">
+      <h3>{{user.name.first + " " + user.name.last | titlecase}}
+        <span>{{user.email}}</span>
+        <span>{{user.location.city | titlecase}}</span>
+      </h3>
+    </li>
+  </ul>
+</div>
+<app-modalview [modalToggle]="modalToggle" [user]="user" (change)="toggleModal()" ></app-modalview>

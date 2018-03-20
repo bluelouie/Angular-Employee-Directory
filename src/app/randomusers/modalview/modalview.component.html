@@ -1,0 +1,19 @@
+<div *ngIf="modalToggle" id="myModal" class="modal" (click)="closeModal($event)">
+
+  <div class="modal-content">
+    <span (click)="closeModal($event)" class="close">&times;</span>
+    <div class="modal-content--section">
+      <div class="modal-content--section">
+        <img class="modal--pic" [src]="user.picture.large" alt="Pic">
+        <h2>{{user.name.first}} {{user.name.last}}</h2>
+        <h3>{{user.email}}</h3>
+        <h3>{{user.location.city}}</h3>
+        <hr>
+        <h3>{{user.cell}}</h3>
+        <h3>{{user.location.street}}, {{abbrRegion(user.location.state, 'abbr')}} {{user.location.postcode}}</h3>
+        <h3>Birthday: {{dobArrange(user.dob)}}</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
