@@ -6,8 +6,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { TitleCasePipe } from './title-case.pipe';
-import { RandomuserService } from './randomuser.service';
 import { RandomusersComponent } from './randomusers/randomusers.component';
 import { ModalviewComponent } from './randomusers//modalview/modalview.component';
 
@@ -15,7 +13,6 @@ import { ModalviewComponent } from './randomusers//modalview/modalview.component
 @NgModule({
   declarations: [
     AppComponent,
-    TitleCasePipe,
     RandomusersComponent,
     ModalviewComponent
   ],
@@ -24,7 +21,7 @@ import { ModalviewComponent } from './randomusers//modalview/modalview.component
     FormsModule,
     HttpModule
   ],
-  providers: [RandomuserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
